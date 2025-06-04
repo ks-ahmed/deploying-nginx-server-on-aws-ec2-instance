@@ -32,17 +32,25 @@ During this project, I built a strong foundation in networking, including:
 
 ### 1. Domain Purchase
 - Acquired a domain from **Cloudflare**.
-- Managed DNS settings via Cloudflare dashboard.
 
   ![Screenshot from 2025-05-18 13-32-32](https://github.com/user-attachments/assets/9364f4d3-265d-48b4-8ac1-02de61b3a342)
 
+- Managed DNS settings via Cloudflare dashboard.
+
+![Screenshot 2025-05-19 172112](https://github.com/user-attachments/assets/5ca4e8b0-f715-45e9-86a3-0e7a10173f42)
+
+---
 
 ### 2. EC2 Instance Setup
 - Launched a **t2.micro** Amazon EC2 instance using **Ubuntu**.
-- Configured inbound rules to allow **HTTP (port 80)** traffic.
 
   ![Screenshot from 2025-05-18 19-06-42](https://github.com/user-attachments/assets/ddcb7b67-1628-4271-aa1f-bceae607ae9d)
 
+- Configured inbound rules to allow **HTTP (port 80)** traffic.
+
+  ![Screenshot 2025-05-19 171733](https://github.com/user-attachments/assets/96e797ca-b42c-41f2-9e50-98fd130406f6)
+
+---
 
 ### 3. Install NGINX
 - Connected to the EC2 instance via SSH.
@@ -68,11 +76,8 @@ sudo systemctl status nginx
 
 ### 4. Domain-to-IP Mapping
 Created an A record in Cloudflare DNS:
-
 Host: nginx.vettlyai.com
-
 Value: Public IP of EC2 instance
-
 Waited for DNS propagation (~5–10 minutes).
 
 
@@ -121,7 +126,8 @@ Real-world deployment of a public-facing web server.
 Basic knowledge of security group rules and network accessibility.
 End-to-end experience from domain registration to live hosting.
 
-### Screenshots (Optional)
+---
+### Screenshots (nginx conf/ dig /nslookup
 
 
 ![Screenshot from 2025-05-19 13-39-09](https://github.com/user-attachments/assets/99d56248-e19b-4e8b-8d97-f11437380894)
@@ -135,6 +141,16 @@ End-to-end experience from domain registration to live hosting.
 ![Screenshot from 2025-05-18 19-59-13](https://github.com/user-attachments/assets/6e35ff24-a75e-42ab-a748-0d8579492ffd)
 
 
+---
+
+### Conclusion
+This project was a valuable opportunity to bridge theory and practice in the field of networking and cloud computing. By deploying a fully functional NGINX web server on an AWS EC2 instance and integrating it with a custom domain via Cloudflare, I demonstrated understanding in real-world infrastructure setup, domain management, and web server configuration.
+
+Beyond the technical implementation, customizing the NGINX homepage by adding a personal touch allowed me to reflect on my understanding of user experience and presentation 
+
+Overall, this project not only deepened my knowledge of core networking principles but also showcased my ability to deploy, troubleshoot, and maintain a publicly accessible web service from end to end.
+
+---
 
 ### Acknowledgments
 
