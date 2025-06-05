@@ -137,7 +137,7 @@ Fueled with curiosity; after verified public accessibility through the NGINX lan
 
 Used command-line tools to verify DNS configuration and ensure the domain correctly pointed to the EC2 instance.
 
- -  **`dig`** : Queried DNS records to confirm that `nginx.vettlyai.com` resolved to the EC2 public IP. 
+ -  **`dig`** : Queried DNS records to confirm that when using `dig nginx.vettlyai.com` resolved to the EC2 public IP. 
  -  **`nslookup`** : Verified the domain-to-IP resolution and checked authoritative DNS response with `nslookup nginx.vettlyai.com`.            
 
 
