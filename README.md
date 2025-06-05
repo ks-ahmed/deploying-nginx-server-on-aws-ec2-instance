@@ -1,14 +1,14 @@
 # Nginx on AWS EC2 with DNS routing using Cloudflare.
 
 
-This project demonstrates designing and deploying of a real-world networked web-app by deploying an NGINX web server on an Amazon Web Service (AWS) EC2 instance and making it accessible via a custom domain using Cloudflare DNS.
+This project demonstrates the designing and deploying of a real-world networked web-app by deploying an NGINX server on an Amazon Web Service (AWS) EC2 instance and making it accessible via a custom domain using Cloudflare DNS.
 
 ---
 
 ## Overview
 
   - Designing and deploying cloud-based network infrastructure.
-  - Understanding the core components of web traffic, server configuration, and DNS.
+  - Solidifying the core components of web traffic, server configuration, and DNS.
   - Registering and configuring a custom domain with proper DNS records.
 
 ---
@@ -137,8 +137,8 @@ Fueled with curiosity; after verified public accessibility through the NGINX lan
 
 Used command-line tools to verify DNS configuration and ensure the domain correctly pointed to the EC2 instance.
 
- -  **`dig`** : Queried DNS records to confirm that when using `dig nginx.vettlyai.com` resolved to the EC2 public IP. 
- -  **`nslookup`** : Verified the domain-to-IP resolution and checked authoritative DNS response with `nslookup nginx.vettlyai.com`.            
+ -  **`dig`** : Queried DNS records using `dig nginx.vettlyai.com`.
+ -  **`nslookup`** : Verified the domain-to-IP resolution and checked DNS response with `nslookup nginx.vettlyai.com`.            
 
 
 ![Screenshot from 2025-05-19 13-39-09](https://github.com/user-attachments/assets/458e80aa-4540-4131-925a-29f58f89f84d)
@@ -148,7 +148,7 @@ Used command-line tools to verify DNS configuration and ensure the domain correc
 ![thumbnail_image](https://github.com/user-attachments/assets/083c62bf-6b2b-4a26-b1c3-f300b1ad7d3e)
 
 
-**These tools were essential in:**
+### These tools were essential in:
 
   - **Verifying** that Cloudflare’s A record was correctly set.
   - **Checking** for DNS propagation delays.
@@ -158,29 +158,29 @@ Used command-line tools to verify DNS configuration and ensure the domain correc
 
 ### Key Takeaways & Conclusion
 
-
-| Takeaway                            | Description                                                                                  |
-| ----------------------------------- | -------------------------------------------------------------------------------------------- |
-| **DNS & A Records**                 | Gained hands-on experience configuring A records to map a domain to a server.                |
-| **Web Server Deployment**           | Successfully hosted a public-facing NGINX server accessible via a custom domain.             |
-| **Security Groups & Accessibility** | Understood and applied AWS security group rules to control traffic and ensure proper access. |
-| **End-to-End Project Delivery**     | Carried out the full lifecycle — from domain registration to server setup and deployment.    |
+  - **DNS & A Records**
+      - Gained hands-on experience configuring A records to map a domain to a server. \
+  - **Web Server Deployment**
+      - Successfully hosted a public-facing NGINX server accessible via a custom domain. \
+  - **Security Groups & Accessibility**
+      - Understood and applied AWS security group rules to control traffic and ensure proper access. \
+  - **End-to-End Project Delivery**
+      - Carried out the full lifecycle — from domain registration to server setup and deployment.    
 
 ---
 
-This project was a valuable opportunity to bridge theory and practice in the field of networking and cloud computing. By deploying a **fully functional NGINX web server on an AWS EC2 instance and integrating it with a custom domain via Cloudflare,** 
-I demonstrated understanding in real-world infrastructure setup, domain management, and web server configuration.
+↳ This project was a valuable opportunity to bridge theory and practice in the field of networking and cloud computing. By deploying a **fully functional NGINX web server on an AWS EC2 instance** and integrating it with a custom domain via Cloudflare, I demonstrated understanding in real-world infrastructure setup, domain management and web server configuration. 
 
-Beyond the technical implementation, customising the NGINX homepage by adding a personal touch allowed me to reflect on my understanding of user experience and presentation 
+↳ Beyond the technical implementation, customising the NGINX homepage by adding a personal touch allowed me to reflect on my understanding of user experience and presentation. 
 
-Overall, this project not only deepened my knowledge of core networking principles but also deepened my ability to deploy, troubleshoot, and maintain a publicly accessible web service from end to end.
+↳ Overall, this project not only deepened my knowledge of core networking principles but also deepened my ability to deploy, troubleshoot, and maintain a publicly accessible web service from end to end.
 
 ---
 
 ### Acknowledgments
 
 Thanks to:
-AWS Documentation
-NGINX Docs
+AWS Documentation \
+NGINX Docs \
 Cloudflare Support Articles
 
