@@ -159,11 +159,11 @@ Used command-line tools to verify DNS configuration and ensure the domain correc
 ### Key Takeaways & Conclusion
 
   - **DNS & A Records**
-      - Gained hands-on experience configuring A records to map a domain to a server. \
+      - Gained hands-on experience configuring A records to map a domain to a server. 
   - **Web Server Deployment**
-      - Successfully hosted a public-facing NGINX server accessible via a custom domain. \
+      - Successfully hosted a public-facing NGINX server accessible via a custom domain. 
   - **Security Groups & Accessibility**
-      - Understood and applied AWS security group rules to control traffic and ensure proper access. \
+      - Understood and applied AWS security group rules to control traffic and ensure proper access. 
   - **End-to-End Project Delivery**
       - Carried out the full lifecycle — from domain registration to server setup and deployment.    
 
