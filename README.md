@@ -7,9 +7,9 @@ This project demonstrates designing and deploying of a real-world networked web-
 
 ## Overview
 
-- Designing and deploying cloud-based network infrastructure.
-- Understanding the core components of web traffic, server configuration, and DNS.
-- Registering and configuring a custom domain with proper DNS records.
+  - Designing and deploying cloud-based network infrastructure.
+  - Understanding the core components of web traffic, server configuration, and DNS.
+  - Registering and configuring a custom domain with proper DNS records.
 
 ---
 
@@ -30,50 +30,48 @@ This project demonstrates designing and deploying of a real-world networked web-
 
 ## Project Steps
 
-### 1. Domain Purchase
-- Acquired a custom domain from **Cloudflare**.
+### 1. Domain Purchase - Acquired a custom domain from *Cloudflare*.
 
-  ![Screenshot from 2025-05-18 13-32-32](https://github.com/user-attachments/assets/9364f4d3-265d-48b4-8ac1-02de61b3a342)
-
----
-
-- Managed DNS settings via Cloudflare dashboard by configuring **DNS A record** to point to my EC2 instance.
-
-![Screenshot 2025-05-19 172112](https://github.com/user-attachments/assets/5ca4e8b0-f715-45e9-86a3-0e7a10173f42)
+![Screenshot from 2025-05-18 13-32-32](https://github.com/user-attachments/assets/33f89ccf-adca-4d0d-b751-66b908c1617a)
 
 ---
 
-### 2. EC2 Instance Setup
-- Launched a **t3.micro** Amazon EC2 instance using **Ubuntu**.
+### Managed DNS settings via Cloudflare dashboard by configuring **DNS A record** to point to my EC2 instance.
 
-  ![Screenshot from 2025-05-18 19-06-42](https://github.com/user-attachments/assets/ddcb7b67-1628-4271-aa1f-bceae607ae9d)
+![Screenshot 2025-05-19 172112](https://github.com/user-attachments/assets/3231f1ca-bd0b-42f3-a323-2dc4ad527152)
+
+---
+
+### 2. EC2 Instance Setup - Launched a **t3.micro** Amazon EC2 instance using **Ubuntu**.
+
+
+![Screenshot from 2025-05-18 19-06-42](https://github.com/user-attachments/assets/86753b89-5aff-4bb9-9e8a-3b9bd97eb9c8)
 
   ---
 
-- Configured inbound rules to allow **HTTP (port 80)** traffic.
+### Configured inbound rules to allow **HTTP (port 80)** traffic.
 
-  ![Screenshot 2025-05-19 171733](https://github.com/user-attachments/assets/96e797ca-b42c-41f2-9e50-98fd130406f6)
+![Screenshot 2025-05-19 171733](https://github.com/user-attachments/assets/659563e9-87ba-4e27-a447-0befc4915ac7)
 
 ---
 
-### 3. Install NGINX
-- Connected to the EC2 instance via SSH.
+### 3. Install NGINX - Connected to the EC2 instance via SSH.
 
 ![Screenshot from 2025-05-18 19-08-54](https://github.com/user-attachments/assets/68097f4b-48a0-4327-8ec5-45223023a209)
 
 ---
 
-- Installed NGINX using:
+### Installed NGINX using:
   
-  `sudo apt update`
-  `sudo apt install nginx -y`
+    - `sudo apt update`
+    - `sudo apt install nginx -y`
   
 
   ![Screenshot from 2025-05-18 19-15-53](https://github.com/user-attachments/assets/521e7ec5-e32b-482c-b27e-c8f906404c64)
 
 ---
 
-Verified the service was running using:
+### Verified the service was running using:
 
 `sudo systemctl status nginx`
 
@@ -94,25 +92,26 @@ Verified the service was running using:
 | **Propagation Time** | \~5–10 minutes for DNS changes to take effect globally               |
 | **Result**           | Domain successfully routed to the NGINX web server hosted on AWS EC2 |
 
+---
 
-![Screenshot from 2025-05-19 16-13-10](https://github.com/user-attachments/assets/cb8282c9-3cae-4314-a57d-0bababa1962c)
+![Screenshot from 2025-05-19 16-13-10](https://github.com/user-attachments/assets/f0291dfc-2aa1-4cbc-a484-7ec4ba6a7662)
 
 
 ---
 
 ### 5. 5. Custom Homepage 
 
-To go beyond and demonstrate a curious thought, I verified public accessibility through the NGINX landing page via the domain and mapped custom domain `nginx.vettlyai.com` to the EC2 instance. 
+Fueled with curiosity; after verified public accessibility through the NGINX landing page, I customised domain `nginx.vettlyai.com` mapping it to the EC2 instance. 
 
-| Element                 | Description                                                                                                                                                                                          |
-| ----------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------
-| **File Edited**         | `/var/www/html/index.html`                                                                                                                                                                           |
-| **Command Used**        | `sudo /var/www/html/index.html`                                                                                                                                                               
-| **Customization Goals** | - Replaced default NGINX landing page<br>- Added branding for `nginx.vettlyai.com`<br>- Wrote a welcome message explaining the project<br>- Used                             simple, semantic HTML and light styling for clarity |
-| **Purpose**             | Enhance the user experience, present the project professionally, and demonstrate attention to detail.                                                                                            
+  - **File Edited:** /var/www/html/index.html
+  - **Command Used:** sudo /var/www/html/index.html
+  - **Customization Goals:** Replaced default NGINX landing page. Added branding for nginx.vettlyai.com. Wrote a welcome message explaining the project
+
+---
 
 ![image1](https://github.com/user-attachments/assets/fa8da1d6-d224-4e26-a973-2958c09da8d1)
 
+---
 
 ![Screenshot from 2025-05-19 18-34-49](https://github.com/user-attachments/assets/e552d8d7-38f8-4b56-9a9b-4db5a003ceb5)
 
@@ -138,26 +137,22 @@ To go beyond and demonstrate a curious thought, I verified public accessibility 
 
 Used command-line tools to verify DNS configuration and ensure the domain correctly pointed to the EC2 instance.
 
-| Tool           | Purpose                                                                                 |
-| -------------- | --------------------------------------------------------------------------------------- |
-| **`dig`**      | Queried DNS records to confirm that `nginx.vettlyai.com` resolved to the EC2 public IP. |
-| **`nslookup`** | Verified the domain-to-IP resolution and checked authoritative DNS response.            |
+ -  **`dig`** : Queried DNS records to confirm that `nginx.vettlyai.com` resolved to the EC2 public IP. 
+ -  **`nslookup`** : Verified the domain-to-IP resolution and checked authoritative DNS response with `nslookup nginx.vettlyai.com`.            
 
-
-### Command UsedL
-`dig nginx.vettlyai.com` and
-`nslookup nginx.vettlyai.com`
 
 ![Screenshot from 2025-05-19 13-39-09](https://github.com/user-attachments/assets/458e80aa-4540-4131-925a-29f58f89f84d)
 
-![thumbnail_image](https://github.com/user-attachments/assets/edd60bde-64f1-4d16-acf3-25cabf0d6be8)
+---
+
+![thumbnail_image](https://github.com/user-attachments/assets/083c62bf-6b2b-4a26-b1c3-f300b1ad7d3e)
 
 
 **These tools were essential in:**
 
-  - Verifying that Cloudflare’s A record was correctly set.
-  - Checking for DNS propagation delays.
-  - Confirming that the EC2 instance was reachable via the domain name.
+  - **Verifying** that Cloudflare’s A record was correctly set.
+  - **Checking** for DNS propagation delays.
+  - **Confirming** that the EC2 instance was reachable via the domain name.
 
 ---
 
@@ -173,7 +168,8 @@ Used command-line tools to verify DNS configuration and ensure the domain correc
 
 ---
 
-This project was a valuable opportunity to bridge theory and practice in the field of networking and cloud computing. By deploying a **fully functional NGINX web server on an AWS EC2 instance and integrating it with a custom domain via Cloudflare,** I demonstrated understanding in real-world infrastructure setup, domain management, and web server configuration.
+This project was a valuable opportunity to bridge theory and practice in the field of networking and cloud computing. By deploying a **fully functional NGINX web server on an AWS EC2 instance and integrating it with a custom domain via Cloudflare,** 
+I demonstrated understanding in real-world infrastructure setup, domain management, and web server configuration.
 
 Beyond the technical implementation, customising the NGINX homepage by adding a personal touch allowed me to reflect on my understanding of user experience and presentation 
 
